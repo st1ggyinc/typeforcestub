@@ -3,11 +3,11 @@ function stub() {}
 stub.Array = stub;
 stub.Boolean = stub;
 stub.Function = stub;
-stub.Nil = stub;
+stub.Nil = value => value === undefined || value === null;
 stub.Number = stub;
 stub.Object = stub;
 stub.String = stub;
-stub.Null = stub;
+stub.Null = stub.Nil;
 stub.arrayOf = stub;
 stub.maybe = stub;
 stub.map = stub;
